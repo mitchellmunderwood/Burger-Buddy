@@ -9,7 +9,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burger", function (req, res) {
-    burger.create(req.params.name, function (data) {
+    burger.create(req.body.name, function (data) {
         res.json(data);
     });
 });
