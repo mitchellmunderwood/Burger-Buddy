@@ -40,12 +40,16 @@ h3 {
 button {
     background-color: rgb(246,246,246);
     border: 1px solid black;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+}
+
+.add_bar {
+    height: 33px;
 }
 
 #submit_btn {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    /* border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; */
     padding: 1px 6px;
 }
 
@@ -53,9 +57,37 @@ input {
     width: calc(100% - 35px);
     border: 1px solid black;
     border-right: none;
-    border-top-right-radius: 0px;
+    /* border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px; */
     margin-bottom: 20px;
+}
+
+
+
+.undevoured {
+    border: 1px solid black;
+    
+}
+
+.devoured {
+    border: 1px solid black;
+ 
+}
+
+.mid {
+    width: 217px;
+}
+
+.mid_gone {
+    width: 267px;
+}
+
+table {
+    margin-bottom: 5px;
+}
+
+th {
+    padding-left: 5px;
 }
