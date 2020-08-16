@@ -1,43 +1,45 @@
 <div class="top">
-    <h1>Eat-Da-Burger!</h1>
-    <img id="burger" src="/assets/img/burger.png" alt="">
-
+    <div id="header">
+        <h1>Eat-Da-Burger!</h1>
+        <img id="burger" src="/assets/img/burger.png" alt="">
+    </div>
 
     <div class="add_bar">
         <input id="burgerName" type="text" placeholder=" Add Yummy Burger!"><button id="submit_btn"><i
                 class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
 
+    <div id="tables">
+        <table>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <tr class="avail">
+                <th>{{id}}.</th>
+                <th class="mid">{{burger_name}}</th>
+                <th><button class="eat-burger" data-id="{{id}}">
+                        <img src="/assets/img/eat.png" style="width: 30px; height: 30px;" title="Devour It!" alt="">
+                </th>
+                </button>
+            </tr>
+            {{/unless}}
+            {{/each}}
 
+        </table>
 
-    <table>
-        {{#each burgers}}
-        {{#unless devoured}}
-        <tr class="avail">
-            <th>{{id}}.</th>
-            <th class="mid">{{burger_name}}</th>
-            <th><button class="eat-burger" data-id="{{id}}">
-                    <img src="/assets/img/eat.png" style="width: 30px; height: 30px;" alt=""></th>
-            </button>
-        </tr>
-        {{/unless}}
-        {{/each}}
+        <!-- eaten table -->
 
-    </table>
+        <table>
+            {{#each burgers}}
+            {{#if devoured}}
+            <tr class="gone">
 
-    <!-- eaten table -->
+                <th><strike>{{id}}.</strike></th>
+                <th class="mid_gone"><strike>{{burger_name}}</strike></th>
+            </tr>
+            {{/if}}
+            {{/each}}
 
-    <table>
-        {{#each burgers}}
-        {{#if devoured}}
-        <tr class="gone">
-
-            <th><strike>{{id}}.</strike></th>
-            <th class="mid_gone"><strike>{{burger_name}}</strike></th>
-        </tr>
-        {{/if}}
-        {{/each}}
-
-    </table>
+        </table>
+    </div>
 </div>
 </div>

@@ -19,20 +19,24 @@ $(function () {
 
     $("#submit_btn").on("click", function (event) {
         event.preventDefault();
+        if ($("#burgerName").val().trim().length < 1) {
+            alert("You can't add a nameless burger");
 
-        var newBurger = {
-            name: $("#burgerName").val().trim(),
-        };
+        } else {
+            var newBurger = {
+                name: $("#burgerName").val().trim(),
+            };
 
-        $.ajax("/api/burger", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("Created New Burger");
-                location.reload();
-            }
-        );
+            $.ajax("/api/burger", {
+                type: "POST",
+                data: newBurger
+            }).then(
+                function () {
+                    console.log("Created New Burger");
+                    location.reload();
+                }
+            );
+        }
     });
 
 

@@ -7,6 +7,9 @@ body {
     background-color: rgb(246,246,246);
 }
 
+.top {
+    width: 600px;
+}
 
 html,body {
     margin: 0px;
@@ -18,6 +21,7 @@ html,body {
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -84,3 +88,13 @@ table {
     color: red;
 }
 
+#tables {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
