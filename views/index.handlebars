@@ -1,31 +1,43 @@
-<h1>Burgers</h1>
-
-<h2>Undevoured</h2>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>#{{id}}. {{burger_name}}, {{devoured}} <button class="eat-burger" data-id="{{id}}">Devour!</button></li>
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Devoured</h2>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>#{{id}}. {{burger_name}}, {{devoured}}</li>
-    {{/if}}
-    {{/each}}
-</ul>
+<div class="top">
+    <h1>Eat-Da-Burger!</h1>
+    <img id="burger" src="/assets/img/burger.png" alt="">
 
 
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="createBurger" name="name">
+    <div class="add_bar">
+        <input id="burgerName" type="text" placeholder=" Add Yummy Burger!"><button id="submit_btn"><i
+                class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
 
-    <button type="submit">Create</button>
-</form>
+
+
+    <table>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <tr class="avail">
+            <th>{{id}}.</th>
+            <th class="mid">{{burger_name}}</th>
+            <th><button class="eat-burger" data-id="{{id}}">
+                    <img src="/assets/img/eat.png" style="width: 30px; height: 30px;" alt=""></th>
+            </button>
+        </tr>
+        {{/unless}}
+        {{/each}}
+
+    </table>
+
+    <!-- eaten table -->
+
+    <table>
+        {{#each burgers}}
+        {{#if devoured}}
+        <tr class="gone">
+
+            <th><strike>{{id}}.</strike></th>
+            <th class="mid_gone"><strike>{{burger_name}}</strike></th>
+        </tr>
+        {{/if}}
+        {{/each}}
+
+    </table>
+</div>
+</div>

@@ -17,11 +17,11 @@ $(function () {
         );
     });
 
-    $(".create-form").on("submit", function (event) {
+    $("#submit_btn").on("click", function (event) {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#createBurger").val().trim(),
+            name: $("#burgerName").val().trim(),
         };
 
         $.ajax("/api/burger", {
