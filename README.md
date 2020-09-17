@@ -1,4 +1,4 @@
-# Eat-Da-Burger! 
+# Burger Buddy!
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 ### Description 
  A fun MVC model full stack application that lets you add and devour burgers. The project utilizes node and express on the backend, with a handlebars front end. As you type in different burgers into the add bar, you will see them show up on the left side of the screen. Once you select the devour button, the burgers will then shift to the right side of the screen. 
