@@ -88,7 +88,7 @@ Burger Buddy is licensed under the terms of the [MIT License](https://opensource
          alt="Node">
 </p>
 
-Open Source Tools:
+<!-- Open Source Tools: -->
 
 <!-- - [Thing](https://thing.com) -->
 
